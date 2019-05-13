@@ -1,0 +1,17 @@
+<app-header [title]="'GMI Shopping'"></app-header>
+
+<h4 style="text-align:center">Groceries</h4><br>
+<div class="card" *ngFor="let grocery of groceries" style="margin-left:8%;display:inline-block">
+  <img [src]="grocery.image" style="width:200px;height:190px;">
+  <h6 style="text-align:center">{{grocery.name}}</h6>
+  <h6 style="text-align:center">Price: {{grocery.price|currency:'INR'}}</h6>
+  <p style="text-align:center">Ratings:
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star-half-alt"></i>
+    <i class="far fa-star"></i>
+  </p>
+  <button class="btn btn-success" style="margin-top:24%;margin-left: 25%;margin-bottom: 10%" (click)="addCart()">Buy
+    Now</button>
+</div>

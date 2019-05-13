@@ -1,0 +1,104 @@
+<div class="jumbotron">
+  <div class="row">
+    <div class="col-6 offset-3">
+      <h3>Place Your Order</h3>
+      <form [formGroup]="orderForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" formControlName="name" class="form-control"
+            [ngClass]="{'is-invalid':submitted && f.name.errors }" />
+          <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+            <div *ngIf="f.name.errors.required">First Name is required</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Mobile Number</label>
+          <input type="text" formControlName="mobile" class="form-control"
+            [ngClass]="{'is-invalid':submitted && f.mobile.errors}" />
+          <div *ngIf="submitted && f.mobile.errors" class="invalid-feedback">
+            <div *ngIf="f.mobile.errors.required">Mobile Number is required</div>
+            <div *ngIf="f.mobile.errors.required.minLength">Mobile number should be minimum of 10</div>
+            <div *ngIf="f.mobile.errors.required.maxLength">Mobile number should be maxmum of 10</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Product Name</label>
+          <input type="text" formControlName="product" class="form-control"
+            [ngClass]="{'is-invalid':submitted && f.product.errors}" />
+          <div *ngIf="submitted && f.product.errors" class="invalid-feedback">
+            <div *ngIf="f.product.errors.required">Product name is required</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Code</label>
+          <input type="text" formControlName="code" class="form-control"
+            [ngClass]="{'is-invalid':submitted && f.code.errors}" />
+          <div *ngIf="submitted && f.code.errors" class="invalid-feedback">
+            <div *ngIf="f.code.errors.required">Code is required</div>
+
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Quantity</label>
+          <input type="number" class="form-control" formControlName="quantity"
+            [ngClass]="{'is-invalid':submitted && f.quantity.errors}" />
+          <div *ngIf="submitted && f.quantity.errors" class="invalid-feedback">
+            <div *ngIf="f.quantity.errors.required">quantity is required</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Address</label>
+          <input type="text" formControlName="address" class="form-control"
+            [ngClass]="{'is-invalid':submitted && f.address.errors}" />
+          <div *ngIf="submitted && f.address.errors" class="invalid-feedback">
+            <div *ngIf="f.address.errors.required">Address is required</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>City</label>
+          <input type="text" formControlName="city" class="form-control"
+            [ngClass]="{'is-invalid':submitted && f.city.errors}" />
+          <div *ngIf="submitted && f.city.errors" class="invalid-feedback">
+            <div *ngIf="f.city.errors.required">City is required</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Pincode</label>
+          <input type="text" formControlName="pincode" class="form-control"
+            [ngClass]="{'is-invalid':submitted && f.pincode.errors}" />
+          <div *ngIf="submitted && f.pincode.errors" class="invalid-feedback">
+            <div *ngIf="f.pincode.errors.required">City is required</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>State</label>
+          <input type="text" formControlName="state" class="form-control"
+            [ngClass]="{'is-invalid':submitted && f.state.errors}" />
+          <div *ngIf="submitted && f.state.errors" class="invalid-feedback">
+            <div *ngIf="f.state.errors.required">State is required</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Landmark</label>
+          <input type="text" formControlName="landmark" class="form-control"
+            [ngClass]="{'is-invalid':submitted && f.landmark.errors}" />
+          <div *ngIf="submitted && f.landmark.errors" class="invalid-feedback">
+            <div *ngIf="f.landmark.errors.required">Landmark is required</div>
+          </div>
+        </div><br>
+
+
+        <div class="form-group">
+          <button class="btn btn-outline-success" style="margin-left:35%">Confirm order</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

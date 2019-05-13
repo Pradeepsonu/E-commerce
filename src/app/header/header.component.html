@@ -1,0 +1,29 @@
+<nav class="navbar bg-dark" style="color:white">
+  <div>
+    <h4 style="font-family:Arial, Helvetica, sans-serif">{{title}}</h4>
+  </div>
+  <div class="dropdown">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="color:white">
+      Shop by Category
+
+    </button>
+    <div class="dropdown-menu" style="cursor:pointer">
+      <button class="dropdown-item btn" (click)="navigateToElectronics()">Electronics</button>
+      <button class="dropdown-item btn" (click)="navigateToAccessory()">Accessories</button>
+      <button class="dropdown-item btn" (click)="navigateToClothes()">Clothes</button>
+      <button class="dropdown-item btn" (click)="navigateToHome()">Home appliance</button>
+      <button class="dropdown-item btn" (click)="navigateToGrocery()">Groceries</button>
+      <button class="dropdown-item btn" (click)="navigateToFootwear()">Footwear</button>
+    </div>
+  </div>
+  <!-- <form>
+    <input type="text" placeholder="Search for products" class="form-control">
+  </form> -->
+
+  <button class="btn" style="color: white;margin-left: 20%"><i class="fas fa-shopping-cart">
+      Cart</i>&nbsp;<span class="badge badge-light">1</span></button>
+
+  <button class="btn btn-default" style="float:right;color: white;" (click)="navigateToLogin()"><i
+      class="fas fa-sign-out-alt">
+      Logout</i></button>
+</nav>

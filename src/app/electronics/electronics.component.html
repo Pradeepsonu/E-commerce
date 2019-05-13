@@ -1,0 +1,49 @@
+<app-header [title]="'GMI Shopping'"></app-header>
+<h4 style="text-align:center">Mobiles</h4><br>
+<div class="card" *ngFor="let mobile of mobiles" style="margin-left:20px;display:inline-block">
+  <img [src]="mobile.image" style="width:200px;height:190px;">
+  <h6 style="text-align:center">{{mobile.name}}</h6>
+  <h6 style="text-align:center">Price: {{mobile.price|currency:'INR'}}</h6>
+  <p style="text-align:center">Ratings:
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="far fa-star"></i>
+  </p>
+  <button class="btn btn-success" style="margin-top:24%;margin-left: 25%;margin-bottom: 10%" (click)="addCart()">Buy
+    Now</button>
+</div><br><br>
+
+<h4 style="text-align:center">Tablet Phones</h4><br>
+<div class="card" *ngFor="let tab of tabs" style="margin-left:110px;display:inline-block">
+  <img [src]="tab.image" style="width:200px;height:190px;">
+  <h6 style="text-align:center">{{tab.name}}</h6>
+  <h6 style="text-align:center">Price: {{tab.price|currency:'INR'}}</h6>
+  <p style="text-align:center">Ratings:
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star-half-alt"></i>
+    <i class="far fa-star"></i>
+  </p>
+  <button class="btn btn-success" style="margin-top:24%;margin-left: 25%;margin-bottom: 10%" (click)="addCart()">Buy
+    Now</button>
+</div><br><br>
+
+
+<h4 style="text-align:center">Laptops</h4><br>
+<div class="card" *ngFor="let laptop of laptops" style="margin-left:20px;display:inline-block">
+  <img [src]="laptop.image" style="width:200px;height:190px;">
+  <h6 style="text-align:center;margin-top:5%">{{laptop.name}}</h6>
+  <h6 style="text-align:center">Price: {{laptop.price|currency:'INR'}}</h6>
+  <p style="text-align:center">Ratings:
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star-half-alt"></i>
+    <i class="far fa-star"></i>
+  </p>
+  <button class="btn btn-success" style="margin-top:24%;margin-left: 25%;margin-bottom: 10%" (click)="addCart()">Buy
+    Now</button>
+</div>

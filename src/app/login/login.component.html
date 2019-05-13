@@ -1,0 +1,35 @@
+<div class="row" style="margin-left:37%;margin-top: 11%">
+  <div class="col-6">
+    <div class="card">
+      <div class="card-header">
+        <h4 style="text-align:center">Login</h4>
+        <app-alert [success]="success" [message]="text">
+        </app-alert>
+
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Username" [(ngModel)]="username" name="username"
+              required>
+          </div><br>
+          <div class="form-group">
+            <input type="password" class="form-control" placeholder="Password" [(ngModel)]="password" name="password"
+              required>
+          </div>
+        </form>
+      </div>
+
+      <div class="card-footer">
+        <button class="btn btn-outline-success" style="margin-left:9%" (click)='login()'>Login</button>
+
+        <button class="btn btn-outline-primary" style="margin-left:39%" (click)="Cancel()">Cancel</button>
+      </div><br>
+
+      <p style="text-align:center">You don't have an account? <button class="btn btn-primary" routerLink="signup">Sign
+          Up</button></p>
+
+    </div>
+
+  </div>
+</div>

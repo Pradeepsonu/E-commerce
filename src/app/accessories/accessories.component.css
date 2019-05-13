@@ -1,0 +1,11 @@
+.card{
+    box-shadow: 5px 5px 3px grey;
+     transition: transform .2s
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+i{
+    color:goldenrod;
+}

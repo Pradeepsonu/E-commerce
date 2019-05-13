@@ -1,0 +1,33 @@
+<app-header [title]="'GMI Shopping'"></app-header>
+
+<h4 style="text-align:center">Men Footwear</h4><br>
+<div class="card" *ngFor="let men of menfootwear" style="margin-left:180px;display:inline-block">
+  <img [src]="men.image" style="width:200px;height:190px;">
+  <h6 style="text-align:center">{{men.name}}</h6>
+  <h6 style="text-align:center">Price: {{men.price|currency:'INR'}}</h6>
+  <p style="text-align:center">Ratings:
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star-half-alt"></i>
+    <i class="far fa-star"></i>
+  </p>
+  <button class="btn btn-success" style="margin-top:24%;margin-left: 25%;margin-bottom: 10%" (click)="addCart()">Buy
+    Now</button>
+</div><br><br>
+
+<h4 style="text-align:center">Women footwear</h4><br>
+<div class="card" *ngFor="let women of womenfootwear" style="margin-left:180px;display:inline-block">
+  <img [src]="women.image" style="width:200px;height:190px;">
+  <h6 style="text-align:center">{{women.name}}</h6>
+  <h6 style="text-align:center">Price: {{women.price|currency:'INR'}}</h6>
+  <p style="text-align:center">Ratings:
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star-half-alt"></i>
+    <i class="far fa-star"></i>
+  </p>
+  <button class="btn btn-success" style="margin-top:24%;margin-left: 25%;margin-bottom: 10%" (click)="addCart()">Buy
+    Now</button>
+</div>

@@ -1,0 +1,12 @@
+.card:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+
+}
+
+.card{
+      transition: .2s;
+      background-color:rgb(177, 177, 152);
+}
+
+

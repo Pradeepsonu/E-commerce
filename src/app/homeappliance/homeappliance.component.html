@@ -1,0 +1,66 @@
+<app-header [title]="'GMI Shopping'"></app-header>
+
+<h4 style="text-align:center">Televisions</h4><br>
+<div class="card" *ngFor="let tv of television" style="margin-left:8%;display:inline-block;">
+  <img [src]="tv.image" style="width:200px;height:190px;">
+  <h6 style="text-align:center">{{tv.name}}</h6>
+  <h6 style="text-align:center">Price: {{tv.price|currency:'INR'}}</h6>
+  <p style="text-align:center">Ratings:
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star-half-alt"></i>
+    <i class="far fa-star"></i>
+  </p>
+  <button class="btn btn-success" style="margin-top:24%;margin-left: 25%;margin-bottom: 10%" (click)="addCart()">Buy
+    Now</button>
+</div><br><br>
+
+<h4 style="text-align:center">Refridgerator</h4><br>
+<div class="card" *ngFor="let fridge of fridges" style="margin-left:8%;display:inline-block">
+  <img [src]="fridge.image" style="width:200px;height:190px;">
+  <h6 style="text-align:center">{{fridge.name}}</h6>
+  <h6 style="text-align:center">Price: {{fridge.price|currency:'INR'}}</h6>
+  <p style="text-align:center">Ratings:
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star-half-alt"></i>
+    <i class="far fa-star"></i>
+  </p>
+  <button class="btn btn-success" style="margin-top:24%;margin-left: 25%;margin-bottom: 10%" (click)="addCart()">Buy
+    Now</button>
+</div><br><br>
+
+
+<h4 style="text-align:center">Washing Machines</h4><br>
+<div class="card" *ngFor="let wm of washings" style="margin-left:8%;display:inline-block">
+  <img [src]="wm.image" style="width:200px;height:190px;">
+  <h6 style="text-align:center">{{wm.name}}</h6>
+  <h6 style="text-align:center">Price: {{wm.price|currency:'INR'}}</h6>
+  <p style="text-align:center">Ratings:
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star-half-alt"></i>
+    <i class="far fa-star"></i>
+  </p>
+  <button class="btn btn-success" style="margin-top:24%;margin-left: 25%;margin-bottom: 10%" (click)="addCart()">Buy
+    Now</button>
+</div><br><br>
+
+<h4 style="text-align:center">Air Conditioner</h4><br>
+<div class="card" *ngFor="let ac of acs" style="margin-left:8%;display:inline-block">
+  <img [src]="ac.image" style="width:200px;height:190px;">
+  <h6 style="text-align:center">{{ac.name}}</h6>
+  <h6 style="text-align:center">Price: {{ac.price|currency:'INR'}}</h6>
+  <p style="text-align:center">Ratings:
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star-half-alt"></i>
+    <i class="far fa-star"></i>
+  </p>
+  <button class="btn btn-success" style="margin-top:24%;margin-left: 25%;margin-bottom: 10%" (click)="addCart()">Buy
+    Now</button>
+</div>

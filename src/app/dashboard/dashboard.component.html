@@ -1,0 +1,40 @@
+<app-header [title]="'GMI Shopping'"></app-header>
+<app-carousel></app-carousel><br>
+
+<div class="row">
+  <div class="col-4">
+    <app-cards [srcUrl]="'assets/elec.jpg'" [title1]="'Electronics'" (click)="navigateToElectronics()"></app-cards>
+  </div>
+
+  <div class="col-4">
+    <app-cards [srcUrl]="'assets/acc.png'" [title1]="'Accessories'" (click)="navigateToAccessory()"></app-cards>
+  </div>
+
+  <div class="col-4">
+    <app-cards [srcUrl]="'assets/clothes.jpg'" [title1]="'Clothes'" (click)="navigateToClothes()"></app-cards>
+  </div>
+</div><br><br>
+
+<div class="row">
+  <div class="col-4">
+    <app-cards [srcUrl]="'assets/appliance.jpg'" [title1]="'Home Appliance'" (click)="navigateToHome()"></app-cards>
+  </div>
+
+  <div class="col-4">
+    <app-cards [srcUrl]="'assets/grocery.jpg'" [title1]="'Groceries'" (click)="navigateToGrocery()"></app-cards>
+  </div>
+
+  <div class="col-4">
+    <app-cards [srcUrl]="'assets/foot.jpg'" [title1]="'Footwears'" (click)="navigateToFootwear()"></app-cards>
+  </div>
+</div>
+
+<!-- <footer class="jumbotron">
+  <div class="container">
+    <h5 style="text-align:center">Get Updates</h5>
+    <form>
+      <input type="email" placeholder="Email Address" class="form-control"><span><button class="btn btn-warning">Notify
+          Me</button></span>
+    </form>
+  </div>
+</footer> -->
